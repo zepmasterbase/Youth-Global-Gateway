@@ -3,75 +3,162 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Youth Global Gateway — Work. Travel. Study Abroad.</title>
+<title>Youth Global Gateway — Work. Travel. Grow.</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
 <style>
 /* Global */
-body { margin:0; font-family:'Montserrat', sans-serif; background:#f7f9fc; color:#333; overflow-x:hidden;}
+body {
+    margin:0;
+    font-family:'Montserrat', sans-serif;
+    background:#f7f9fc;
+    color:#333;
+}
 a { text-decoration:none; color:inherit; }
-button { cursor:pointer; }
+button { cursor:pointer; transition:0.3s; }
 
 /* Header */
 header {
-  display:flex; justify-content:space-between; align-items:center;
-  padding:15px 20px; background:#fff; box-shadow:0 2px 12px rgba(0,0,0,0.08); position:sticky; top:0; z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background:#fff;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 .logo { font-size:26px; font-weight:700; color:#0a66c2; }
-header .apply-btn { padding:10px 22px; background:#ff9800; color:#fff; border:none; border-radius:6px; font-weight:600; transition:0.3s;}
-header .apply-btn:hover { background:#e68900; }
+.apply-btn {
+    padding:10px 24px;
+    background:#ff9800;
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    font-weight:600;
+}
+.apply-btn:hover { background:#e68900; transform:translateY(-2px); }
 
 /* Hero */
-.hero { position:relative; background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920') center/cover no-repeat; display:flex; flex-direction:column; justify-content:center; align-items:center; color:white; text-align:center; padding:120px 20px 80px; overflow:hidden;}
-.hero::after { content:""; position:absolute; inset:0; background:rgba(0,0,0,0.45);}
-.hero-content { position:relative; z-index:1; max-width:900px; }
-.hero h1 { font-size:46px; margin-bottom:15px; text-shadow: 1px 2px 6px rgba(0,0,0,0.5);}
-.hero p { font-size:18px; margin-bottom:25px; text-shadow:1px 1px 4px rgba(0,0,0,0.5);}
-.hero .buttons a { display:inline-block; margin:8px; padding:14px 28px; border-radius:8px; font-weight:600; transition:0.3s; box-shadow:0 6px 15px rgba(0,0,0,0.15);}
-.hero .buttons .primary { background:#ff9800; color:#fff;}
-.hero .buttons .primary:hover { background:#e68900; transform:translateY(-2px);}
-.hero .buttons .secondary { background:#fff; color:#0a66c2;}
-.hero .buttons .secondary:hover { background:#f0f0f0; transform:translateY(-2px);}
+.hero {
+    position:relative;
+    background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1920') center/cover no-repeat;
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+.hero::after {
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+}
+.hero-content { position:relative; z-index:1; max-width:900px; padding:0 20px; }
+.hero h1 { font-size:48px; margin-bottom:15px; text-shadow:1px 2px 6px rgba(0,0,0,0.5); }
+.hero p { font-size:18px; margin-bottom:30px; text-shadow:1px 1px 4px rgba(0,0,0,0.5); }
+.hero .buttons a {
+    display:inline-block;
+    margin:8px;
+    padding:14px 28px;
+    border-radius:8px;
+    font-weight:600;
+    box-shadow:0 6px 15px rgba(0,0,0,0.15);
+}
+.hero .buttons .primary { background:#ff9800; color:#fff; }
+.hero .buttons .primary:hover { background:#e68900; transform:translateY(-2px); }
+.hero .buttons .secondary { background:#fff; color:#0a66c2; }
+.hero .buttons .secondary:hover { background:#f0f0f0; transform:translateY(-2px); }
 
 /* Search Bar */
-.search-bar { background:#fff; border-radius:12px; padding:12px; display:flex; flex-wrap:wrap; justify-content:center; gap:10px; max-width:900px; margin:25px auto 0 auto; box-shadow:0 6px 25px rgba(0,0,0,0.15);}
-.search-bar select, .search-bar input { padding:10px 12px; border-radius:6px; border:1px solid #ccc; flex:1 1 130px; min-width:130px;}
-.search-bar button { padding:10px 18px; border-radius:6px; border:none; background:#0a66c2; color:#fff; font-weight:600; flex:0 0 auto; transition:0.3s;}
-.search-bar button:hover { background:#084a99; transform:translateY(-2px);}
+.search-bar {
+    background:#fff;
+    border-radius:12px;
+    padding:12px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    max-width:900px;
+    margin:25px auto 0 auto;
+    box-shadow:0 6px 25px rgba(0,0,0,0.15);
+}
+.search-bar select, .search-bar input {
+    padding:10px 12px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    flex:1 1 130px;
+    min-width:130px;
+}
+.search-bar button {
+    padding:10px 18px;
+    border-radius:6px;
+    border:none;
+    background:#0a66c2;
+    color:#fff;
+    font-weight:600;
+}
+.search-bar button:hover { background:#084a99; transform:translateY(-2px); }
 
 /* Sections */
 .section { padding:60px 15px; text-align:center; }
 .section h2 { font-size:30px; margin-bottom:40px; color:#0a66c2; }
 
-/* 3D Cards */
-.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:30px; justify-items:center; perspective:1500px; }
-.card {
-  background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 15px 35px rgba(0,0,0,0.15);
-  transition:transform 0.3s ease, box-shadow 0.3s ease;
-  width:100%; max-width:300px;
+/* Cards */
+.cards {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    justify-items:center;
 }
-.card:hover { transform:rotateX(3deg) rotateY(3deg) translateY(-10px); box-shadow:0 25px 50px rgba(0,0,0,0.25);}
+.card {
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+    width:100%;
+    max-width:300px;
+}
+.card:hover { transform:translateY(-10px); box-shadow:0 25px 50px rgba(0,0,0,0.25); }
 .card img { width:100%; height:180px; object-fit:cover; transition: transform 0.3s ease; }
 .card:hover img { transform: scale(1.05); }
 .card-content { padding:15px; text-align:left; }
-.card-content h3 { color:#0a66c2; margin-bottom:6px; font-size:20px;}
-.card-content p { font-size:14px; margin:4px 0;}
+.card-content h3 { color:#0a66c2; margin-bottom:6px; font-size:20px; }
+.card-content p { font-size:14px; margin:4px 0; }
 .card-content .price { font-size:18px; color:#ff9800; font-weight:600; margin:8px 0; }
-.card-content .rating { color:#ffb400; font-weight:600;}
-.card-content button { margin-top:10px; padding:10px 18px; border:none; border-radius:6px; background:#0a66c2; color:#fff; font-weight:600; width:100%; transition:0.3s;}
-.card-content button:hover { background:#084a99; transform:translateY(-2px);}
-button[disabled] { background:gray; cursor:not-allowed;}
+.card-content .rating { color:#ffb400; font-weight:600; }
+.card-content button {
+    margin-top:10px;
+    padding:10px 18px;
+    border:none;
+    border-radius:6px;
+    background:#0a66c2;
+    color:#fff;
+    font-weight:600;
+    width:100%;
+}
+.card-content button:hover { background:#084a99; transform:translateY(-2px); }
+button[disabled] { background:gray; cursor:not-allowed; }
 
-/* CTA */
-.cta { text-align:center; padding:50px 15px; background:#0a66c2; color:#fff; border-radius:12px; margin:50px auto; max-width:900px;}
-.cta button { padding:14px 28px; border:none; border-radius:6px; background:#ff9800; color:#fff; font-weight:600; margin-top:15px; transition:0.3s;}
+/* CTA Banner */
+.cta { text-align:center; padding:50px 15px; background:#0a66c2; color:#fff; border-radius:12px; margin:50px auto; max-width:900px; }
+.cta button { padding:14px 28px; border:none; border-radius:6px; background:#ff9800; color:#fff; font-weight:600; margin-top:15px; }
 .cta button:hover { background:#e68900; transform:translateY(-2px); }
 
 /* Footer */
 footer { background:#0a66c2; color:#fff; text-align:center; padding:25px 15px; font-size:14px; }
 
 /* Responsive */
-@media(max-width:600px){.hero h1{font-size:28px}.hero p{font-size:14px}.search-bar{flex-direction:column}.search-bar select,.search-bar input,.search-bar button{flex:1 1 100%;}}
+@media(max-width:600px){
+    .hero h1{font-size:28px}
+    .hero p{font-size:14px}
+    .search-bar{flex-direction:column}
+    .search-bar select,.search-bar input,.search-bar button{flex:1 1 100%}
+}
 </style>
 </head>
 <body>
@@ -83,8 +170,8 @@ footer { background:#0a66c2; color:#fff; text-align:center; padding:25px 15px; f
 
 <section class="hero">
 <div class="hero-content">
-<h1>Experience Work, Study & Travel Globally</h1>
-<p>Helping African youth aged 20–35 explore jobs, study programs, flights, and hotels worldwide.</p>
+<h1>Work. Travel. Grow.</h1>
+<p>Helping African youth aged 20–35 explore global opportunities: jobs, study programs, flights & hotels.</p>
 <div class="buttons">
 <a href="apply.html" class="primary">Apply Now</a>
 <a href="packages.html" class="secondary">View Packages</a>
@@ -118,7 +205,7 @@ footer { background:#0a66c2; color:#fff; text-align:center; padding:25px 15px; f
 <h2>Featured Destinations</h2>
 <div class="cards">
 <div class="card">
-<img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400" alt="Portugal">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400" alt="Portugal">
 <div class="card-content">
 <h3>Portugal</h3>
 <p>Work, Study, or Travel</p>
@@ -127,7 +214,7 @@ footer { background:#0a66c2; color:#fff; text-align:center; padding:25px 15px; f
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400" alt="Canada">
+<img src="https://images.unsplash.com/photo-1505575967457-66f33d1b8457?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400" alt="Canada">
 <div class="card-content">
 <h3>Canada</h3>
 <p>Work, Study, or Travel</p>
@@ -136,7 +223,7 @@ footer { background:#0a66c2; color:#fff; text-align:center; padding:25px 15px; f
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1557670819-b94c36eabe5f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400" alt="Ireland">
+<img src="https://images.unsplash.com/photo-1501959915551-4e8d70c4df8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400" alt="Ireland">
 <div class="card-content">
 <h3>Ireland</h3>
 <p>Study or Work Abroad</p>
@@ -145,7 +232,7 @@ footer { background:#0a66c2; color:#fff; text-align:center; padding:25px 15px; f
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1508051123996-69f8caf4891d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400" alt="Germany">
+<img src="https://images.unsplash.com/photo-1525518199625-7a8f19d60f5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400" alt="Germany">
 <div class="card-content">
 <h3>Germany</h3>
 <p>Work & Study Opportunities</p>
