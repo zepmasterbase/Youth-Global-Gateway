@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel & Holidays — Youth Global Gateway</title>
+
+<style>
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f7f9fc;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0a66c2;
+}
+
+header .apply-btn {
+    padding: 12px 24px;
+    background: #ff9800;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+header .apply-btn:hover {
+    background: #e68900;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #0a66c2, #28a745);
+    color: white;
+    text-align: center;
+    padding: 100px 20px 60px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-weight: bold;
+    border: none;
+    background: #ff9800;
+    color: white;
+    margin-top: 10px;
+}
+
+.hero button:hover {
+    background: #e68900;
+}
+
+/* Section Styles */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+/* Booking Cards */
+.booking-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.booking-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px 20px;
+    width: 320px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    text-align: left;
+}
+
+.booking-card:hover {
+    transform: translateY(-5px);
+}
+
+.booking-card h3 {
+    color: #0a66c2;
+    margin-bottom: 15px;
+}
+
+/* Embeds */
+iframe {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    min-height: 400px;
+}
+
+/* Call to Action */
+.cta {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.cta button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 6px;
+    background: #ff9800;
+    color: white;
+    font-weight: bold;
+}
+
+.cta button:hover {
+    background: #e68900;
+}
+
+/* Footer */
+footer {
+    background: #0a66c2;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .booking-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container" style="width:90%; margin:auto; display:flex; justify-content:space-between; align-items:center;">
+<div class="logo">Youth Global Gateway</div>
+<button class="apply-btn" onclick="window.location.href='apply.html'">Apply Now</button>
+</div>
+</header>
+
+<section class="hero">
+<h1>Travel & Holidays Made Easy</h1>
+<p>Book flights and hotels worldwide, or combine travel with your work or study abroad program.</p>
+<button onclick="window.location.href='apply.html'">Start Your Journey</button>
+</section>
+
+<section class="section">
+<h2>Flight Booking</h2>
+<p>Search and book flights to your destination.</p>
+
+<div class="booking-container">
+<div class="booking-card">
+<h3>Flight Search</h3>
+<!-- Skyscanner iframe placeholder -->
+<iframe src="https://www.skyscanner.com/transport/flights" title="Flight Booking Widget"></iframe>
+</div>
+</div>
+</section>
+
+<section class="section" style="background:#f0f0f0;">
+<h2>Hotel Booking</h2>
+<p>Find the best hotels for your stay abroad.</p>
+
+<div class="booking-container">
+<div class="booking-card">
+<h3>Hotel Reservations</h3>
+<!-- Booking.com iframe placeholder -->
+<iframe src="https://www.booking.com/index.html" title="Hotel Booking Widget"></iframe>
+</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Travel Packages</h2>
+<p>Combine work, study, or holiday with complete flight + hotel packages.</p>
+
+<div class="booking-container">
+<div class="booking-card">
+<h3>Work & Travel</h3>
+<p>Flight + hotel package for work abroad programs.</p>
+<button onclick="window.location.href='apply.html'">Book Now</button>
+</div>
+<div class="booking-card">
+<h3>Holiday Packages</h3>
+<p>Flight + hotel package for leisure trips abroad.</p>
+<button onclick="window.location.href='apply.html'">Book Now</button>
+</div>
+<div class="booking-card">
+<h3>Study Abroad Packages</h3>
+<p>Flight + accommodation + university support services.</p>
+<button onclick="window.location.href='study-abroad.html'">Learn More</button>
+</div>
+</div>
+</section>
+
+<section class="cta">
+<h2>Ready to Book Your Next Adventure?</h2>
+<button onclick="window.location.href='apply.html'">Apply / Reserve Now</button>
+</section>
+
+<footer>
+<p>© 2026 Youth Global Gateway — Work. Travel. Study Abroad. Grow.</p>
+</footer>
+
+</body>
+</html>
