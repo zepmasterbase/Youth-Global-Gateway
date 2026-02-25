@@ -7,15 +7,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* Global Styles */
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     background: #f7f9fc;
     color: #333;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
 }
-
 a { text-decoration: none; color: inherit; }
 button { cursor: pointer; }
 
@@ -31,26 +29,11 @@ header {
     top: 0;
     z-index: 1000;
 }
-
-.logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: #0a66c2;
-}
-
-header .apply-btn {
-    padding: 10px 20px;
-    background: #ff9800;
-    color: white;
-    font-weight: 600;
-    border: none;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-
+.logo { font-size: 24px; font-weight: 700; color: #0a66c2; }
+header .apply-btn { padding: 10px 20px; background: #ff9800; color: white; border: none; border-radius: 6px; font-weight: 600; }
 header .apply-btn:hover { background: #e68900; }
 
-/* Hero Section */
+/* Hero */
 .hero {
     position: relative;
     background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fG5ld3xlbnwwfHx8fDE2OTk5ODk3ODc&ixlib=rb-4.0.3&q=80&w=1920') center/cover no-repeat;
@@ -62,23 +45,10 @@ header .apply-btn:hover { background: #e68900; }
     text-align: center;
     padding: 100px 20px 60px 20px;
 }
-
-.hero::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.45);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 900px;
-}
-
+.hero::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.45); }
+.hero-content { position: relative; z-index: 1; max-width: 900px; }
 .hero h1 { font-size: 42px; margin-bottom: 15px; }
 .hero p { font-size: 16px; margin-bottom: 20px; }
-
 .hero .buttons a {
     display: inline-block;
     margin: 8px;
@@ -87,13 +57,12 @@ header .apply-btn:hover { background: #e68900; }
     font-weight: 600;
     transition: 0.3s;
 }
-
 .hero .buttons .primary { background: #ff9800; color: white; }
 .hero .buttons .primary:hover { background: #e68900; }
 .hero .buttons .secondary { background: white; color: #0a66c2; }
 .hero .buttons .secondary:hover { background: #f0f0f0; }
 
-/* Quick Search Bar */
+/* Search Bar */
 .search-bar {
     background: white;
     border-radius: 10px;
@@ -108,7 +77,6 @@ header .apply-btn:hover { background: #e68900; }
     z-index: 2;
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
-
 .search-bar select, .search-bar input {
     padding: 8px 10px;
     border-radius: 6px;
@@ -116,7 +84,6 @@ header .apply-btn:hover { background: #e68900; }
     flex: 1 1 120px;
     min-width: 120px;
 }
-
 .search-bar button {
     padding: 8px 15px;
     border-radius: 6px;
@@ -128,50 +95,49 @@ header .apply-btn:hover { background: #e68900; }
 }
 
 /* Section Styles */
-.section {
-    padding: 60px 15px;
-    text-align: center;
-}
-
+.section { padding: 60px 15px; text-align: center; }
 .section h2 { font-size: 28px; margin-bottom: 35px; }
 
-/* Flexible Grids */
-.cards, .packages, .timeline, .countries, .universities {
+/* Grid Cards */
+.cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     justify-items: center;
 }
 
 /* Card Styles */
-.card, .package-card, .timeline-step, .country-card, .university-card {
+.card {
     background: white;
     border-radius: 10px;
-    padding: 20px;
-    width: 100%;
-    max-width: 300px;
+    overflow: hidden;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     transition: 0.3s;
     text-align: left;
+    width: 100%;
+    max-width: 300px;
 }
-
-.card:hover, .package-card:hover, .timeline-step:hover, .country-card:hover, .university-card:hover { transform: translateY(-5px); }
-
-.card h3, .package-card h3, .timeline-step h4, .country-card h3, .university-card h3 { color: #0a66c2; margin-bottom: 10px; }
-.card p, .package-card p, .timeline-step p, .country-card p, .university-card p { font-size: 14px; margin-bottom: 6px; }
-
-/* Packages */
-.package-card .price { font-size: 24px; color: #0a66c2; margin: 8px 0; }
-.package-card button {
+.card:hover { transform: translateY(-5px); }
+.card img { width: 100%; height: 180px; object-fit: cover; }
+.card-content { padding: 15px; }
+.card-content h3 { color: #0a66c2; margin-bottom: 8px; font-size: 20px; }
+.card-content p { font-size: 14px; margin: 4px 0; }
+.card-content .price { font-size: 18px; color: #ff9800; margin: 8px 0; font-weight: 600; }
+.card-content .rating { color: #ffb400; font-weight: 600; }
+.card-content button {
     margin-top: 10px;
     padding: 10px 18px;
     border: none;
     border-radius: 6px;
-    background: #ff9800;
+    background: #0a66c2;
     color: white;
     font-weight: 600;
+    width: 100%;
 }
-.package-card button:hover { background: #e68900; }
+.card-content button:hover { background: #084a99; }
+
+/* Disabled / Coming Soon */
+button[disabled] { background: gray; cursor: not-allowed; }
 
 /* CTA */
 .cta {
@@ -183,7 +149,6 @@ header .apply-btn:hover { background: #e68900; }
     margin: 50px auto;
     max-width: 900px;
 }
-
 .cta button {
     padding: 12px 24px;
     border: none;
@@ -196,12 +161,7 @@ header .apply-btn:hover { background: #e68900; }
 .cta button:hover { background: #e68900; }
 
 /* Footer */
-footer {
-    background: #0a66c2;
-    color: white;
-    text-align: center;
-    padding: 25px 15px;
-}
+footer { background: #0a66c2; color: white; text-align: center; padding: 25px 15px; }
 
 /* Responsive Text */
 @media (max-width: 600px) {
@@ -212,14 +172,11 @@ footer {
 }
 </style>
 </head>
-
 <body>
 
 <header>
-<div class="container" style="width:90%; margin:auto; display:flex; justify-content:space-between; align-items:center;">
-<div class="logo">Youth Global Gateway</div>
-<button class="apply-btn" onclick="window.location.href='apply.html'">Apply Now</button>
-</div>
+    <div class="logo">Youth Global Gateway</div>
+    <button class="apply-btn" onclick="window.location.href='apply.html'">Apply Now</button>
 </header>
 
 <section class="hero">
@@ -229,6 +186,7 @@ footer {
 <div class="buttons">
 <a href="apply.html" class="primary">Apply Now</a>
 <a href="packages.html" class="secondary">View Packages</a>
+<a href="travel.html" class="secondary">Browse Flights & Hotels</a>
 </div>
 </div>
 
@@ -257,68 +215,92 @@ footer {
 
 <section class="section">
 <h2>Featured Destinations</h2>
-<div class="countries">
-<div class="country-card">
+<div class="cards">
+<div class="card">
 <img src="https://flagcdn.com/w80/pt.png" alt="Portugal">
+<div class="card-content">
 <h3>Portugal</h3>
 <p>Work, Study, or Travel</p>
+<button onclick="window.location.href='countries.html'">Explore</button>
 </div>
-<div class="country-card">
+</div>
+<div class="card">
 <img src="https://flagcdn.com/w80/ca.png" alt="Canada">
+<div class="card-content">
 <h3>Canada</h3>
 <p>Work, Study, or Travel</p>
+<button onclick="window.location.href='countries.html'">Explore</button>
 </div>
-<div class="country-card">
+</div>
+<div class="card">
 <img src="https://flagcdn.com/w80/ie.png" alt="Ireland">
+<div class="card-content">
 <h3>Ireland</h3>
 <p>Study or Work Abroad</p>
+<button onclick="window.location.href='countries.html'">Explore</button>
 </div>
-<div class="country-card">
+</div>
+<div class="card">
 <img src="https://flagcdn.com/w80/de.png" alt="Germany">
+<div class="card-content">
 <h3>Germany</h3>
 <p>Work & Study Opportunities</p>
+<button onclick="window.location.href='countries.html'">Explore</button>
+</div>
 </div>
 </div>
 </section>
 
 <section class="section">
 <h2>Popular Packages</h2>
-<div class="packages">
-<div class="package-card">
+<div class="cards">
+<div class="card">
+<div class="card-content">
 <h3>Basic</h3>
-<div class="price">$400</div>
 <p>Job listings + visa guidance + email support</p>
+<p class="price">$400</p>
 <button onclick="window.location.href='apply.html'">Apply Now</button>
 </div>
-<div class="package-card">
+</div>
+<div class="card">
+<div class="card-content">
 <h3>Standard</h3>
-<div class="price">$1,500</div>
 <p>Job placement + visa support + pre-departure training</p>
+<p class="price">$1,500</p>
 <button onclick="window.location.href='apply.html'">Apply Now</button>
 </div>
-<div class="package-card">
+</div>
+<div class="card">
+<div class="card-content">
 <h3>Premium</h3>
-<div class="price">$2,500</div>
-<p>Full support: job placement, visa, flight, accommodation, orientation</p>
+<p>Full support: job placement, visa, flights & hotel browsing (Coming Soon)</p>
+<p class="price">$2,500</p>
 <button onclick="window.location.href='apply.html'">Apply Now</button>
+</div>
 </div>
 </div>
 </section>
 
 <section class="section">
 <h2>How It Works</h2>
-<div class="timeline">
-<div class="timeline-step">
-<h4>1. Apply</h4>
+<div class="cards">
+<div class="card">
+<div class="card-content">
+<h3>1. Apply</h3>
 <p>Submit your application and select your desired program or destination.</p>
 </div>
-<div class="timeline-step">
-<h4>2. Match & Guide</h4>
+</div>
+<div class="card">
+<div class="card-content">
+<h3>2. Match & Guide</h3>
 <p>We connect you with verified employers, universities, or travel packages.</p>
 </div>
-<div class="timeline-step">
-<h4>3. Travel & Start</h4>
+</div>
+<div class="card">
+<div class="card-content">
+<h3>3. Travel & Start</h3>
 <p>Get visa support, flights, and accommodations, then begin your global journey.</p>
+</div>
 </div>
 </div>
 </section>
