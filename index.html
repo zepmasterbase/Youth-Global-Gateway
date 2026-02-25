@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Youth Global Gateway — Work. Travel. Grow.</title>
+<title>Youth Global Gateway — Work. Travel. Study Abroad.</title>
 
 <style>
 /* Global Styles */
@@ -61,17 +61,20 @@ header .apply-btn:hover {
     background: linear-gradient(135deg, #0a66c2, #28a745);
     color: white;
     text-align: center;
-    padding: 100px 20px 60px 20px;
+    padding: 120px 20px 80px 20px;
 }
 
 .hero h1 {
-    font-size: 42px;
+    font-size: 46px;
     margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 18px;
     margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero .buttons a {
@@ -101,7 +104,7 @@ header .apply-btn:hover {
     background: #f0f0f0;
 }
 
-/* Highlights Section */
+/* Section Styles */
 .section {
     padding: 80px 20px;
     text-align: center;
@@ -112,84 +115,47 @@ header .apply-btn:hover {
     margin-bottom: 40px;
 }
 
-.cards {
+/* Cards */
+.cards, .packages, .timeline, .university-container, .countries {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
 }
 
-.card {
-    background: white;
-    border-radius: 10px;
-    padding: 30px 20px;
-    width: 280px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card h3 {
-    color: #0a66c2;
-    margin-bottom: 15px;
-}
-
-/* Countries Preview */
-.countries {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.country {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    width: 140px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-.country img {
-    width: 50px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-/* Packages Preview */
-.packages {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.package-card {
+.card, .package-card, .timeline-step, .university-card, .country-card {
     background: white;
     border-radius: 10px;
     padding: 25px 20px;
-    width: 280px;
+    width: 300px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     transition: 0.3s;
+    text-align: left;
 }
 
-.package-card:hover {
+.card:hover, .package-card:hover, .timeline-step:hover, .university-card:hover, .country-card:hover {
     transform: translateY(-5px);
 }
 
-.package-card .price {
-    font-size: 32px;
+.card h3, .package-card h3, .timeline-step h4, .university-card h3, .country-card h3 {
     color: #0a66c2;
-    margin: 15px 0;
+    margin-bottom: 12px;
+}
+
+.card p, .package-card p, .timeline-step p, .university-card p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* Packages */
+.package-card .price {
+    font-size: 28px;
+    color: #0a66c2;
+    margin: 10px 0;
 }
 
 .package-card button {
-    margin-top: 20px;
+    margin-top: 15px;
     padding: 12px 20px;
     border: none;
     border-radius: 6px;
@@ -202,25 +168,35 @@ header .apply-btn:hover {
     background: #e68900;
 }
 
-/* How It Works Preview */
-.timeline {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+/* Countries */
+.country-card {
+    text-align: center;
+    padding: 20px;
 }
 
-.timeline-step {
-    background: white;
-    border-radius: 10px;
-    padding: 25px 20px;
-    width: 250px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-}
-
-.timeline-step h4 {
-    color: #0a66c2;
+.country-card img {
+    width: 50px;
+    height: auto;
     margin-bottom: 10px;
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.cta button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 6px;
+    background: #ff9800;
+    color: white;
+    font-weight: bold;
+}
+
+.cta button:hover {
+    background: #e68900;
 }
 
 /* Footer */
@@ -234,7 +210,7 @@ footer {
 
 /* Responsive */
 @media (max-width: 900px) {
-    .cards, .packages, .timeline {
+    .cards, .packages, .timeline, .university-container, .countries {
         flex-direction: column;
         align-items: center;
     }
@@ -245,15 +221,15 @@ footer {
 <body>
 
 <header>
-<div class="container">
+<div class="container" style="width:90%; margin:auto; display:flex; justify-content:space-between; align-items:center;">
 <div class="logo">Youth Global Gateway</div>
 <button class="apply-btn" onclick="window.location.href='apply.html'">Apply Now</button>
 </div>
 </header>
 
 <section class="hero">
-<h1>Work Abroad With Confidence</h1>
-<p>Helping African youth aged 20–35 access verified work opportunities worldwide.</p>
+<h1>Work. Travel. Study Abroad.</h1>
+<p>Empowering African youth aged 20–35 to explore global work, study, and travel opportunities with expert guidance.</p>
 <div class="buttons">
 <a href="apply.html" class="primary">Apply Now</a>
 <a href="packages.html" class="secondary">Explore Packages</a>
@@ -265,15 +241,15 @@ footer {
 <div class="cards">
 <div class="card">
 <h3>Trusted Guidance</h3>
-<p>Step-by-step support to ensure your journey is safe and reliable.</p>
+<p>Step-by-step support to ensure your journey abroad is safe, secure, and reliable.</p>
 </div>
 <div class="card">
 <h3>Global Opportunities</h3>
-<p>Access work programs across Europe, North America, and beyond.</p>
+<p>Access verified job, study, and travel programs across multiple countries worldwide.</p>
 </div>
 <div class="card">
 <h3>Youth-Focused Support</h3>
-<p>Designed specifically for ambitious young professionals seeking international careers.</p>
+<p>Services designed specifically for ambitious young professionals and students from Africa.</p>
 </div>
 </div>
 </section>
@@ -281,33 +257,33 @@ footer {
 <section class="section">
 <h2>Our Destinations</h2>
 <div class="countries">
-<div class="country">
-<img src="https://flagcdn.com/w80/pt.png" alt="Portugal Flag">
-<p>Portugal</p>
+<div class="country-card">
+<img src="https://flagcdn.com/w80/pt.png" alt="Portugal">
+<h3>Portugal</h3>
 </div>
-<div class="country">
-<img src="https://flagcdn.com/w80/ca.png" alt="Canada Flag">
-<p>Canada</p>
+<div class="country-card">
+<img src="https://flagcdn.com/w80/ca.png" alt="Canada">
+<h3>Canada</h3>
 </div>
-<div class="country">
-<img src="https://flagcdn.com/w80/ie.png" alt="Ireland Flag">
-<p>Ireland</p>
+<div class="country-card">
+<img src="https://flagcdn.com/w80/ie.png" alt="Ireland">
+<h3>Ireland</h3>
 </div>
-<div class="country">
-<img src="https://flagcdn.com/w80/de.png" alt="Germany Flag">
-<p>Germany</p>
+<div class="country-card">
+<img src="https://flagcdn.com/w80/de.png" alt="Germany">
+<h3>Germany</h3>
 </div>
-<div class="country">
-<img src="https://flagcdn.com/w80/lv.png" alt="Latvia Flag">
-<p>Latvia</p>
+<div class="country-card">
+<img src="https://flagcdn.com/w80/lv.png" alt="Latvia">
+<h3>Latvia</h3>
 </div>
-<div class="country">
-<img src="https://flagcdn.com/w80/cz.png" alt="Czech Republic Flag">
-<p>Czech Republic</p>
+<div class="country-card">
+<img src="https://flagcdn.com/w80/cz.png" alt="Czech Republic">
+<h3>Czech Republic</h3>
 </div>
-<div class="country">
-<img src="https://flagcdn.com/w80/ec.png" alt="Ecuador Flag">
-<p>Ecuador</p>
+<div class="country-card">
+<img src="https://flagcdn.com/w80/ec.png" alt="Ecuador">
+<h3>Ecuador</h3>
 </div>
 </div>
 </section>
@@ -337,25 +313,54 @@ footer {
 </section>
 
 <section class="section">
-<h2>How It Works</h2>
-<div class="timeline">
-<div class="timeline-step">
-<h4>1. Apply</h4>
-<p>Complete your application and tell us your preferred destination.</p>
+<h2>Study Abroad Programs</h2>
+<div class="university-container">
+<div class="university-card">
+<h3>University of Toronto, Canada</h3>
+<p><strong>Programs:</strong> Undergrad & Postgrad</p>
+<p><strong>Tuition:</strong> $20,000–$45,000/year</p>
+<button onclick="window.location.href='study-abroad.html#application'">Apply Now</button>
 </div>
-<div class="timeline-step">
-<h4>2. Job Matching</h4>
-<p>We connect you with verified employers and guide you through interviews.</p>
+<div class="university-card">
+<h3>Trinity College Dublin, Ireland</h3>
+<p><strong>Programs:</strong> Undergrad & Postgrad</p>
+<p><strong>Tuition:</strong> $18,000–$40,000/year</p>
+<button onclick="window.location.href='study-abroad.html#application'">Apply Now</button>
 </div>
-<div class="timeline-step">
-<h4>3. Travel & Work</h4>
-<p>Get your visa, travel, and start your new international career with support.</p>
+<div class="university-card">
+<h3>Technical University of Munich, Germany</h3>
+<p><strong>Programs:</strong> Engineering & IT</p>
+<p><strong>Tuition:</strong> Minimal (~$500/semester)</p>
+<button onclick="window.location.href='study-abroad.html#application'">Apply Now</button>
 </div>
 </div>
 </section>
 
+<section class="section">
+<h2>How It Works</h2>
+<div class="timeline">
+<div class="timeline-step">
+<h4>1. Apply</h4>
+<p>Fill your application form and select your preferred program or destination.</p>
+</div>
+<div class="timeline-step">
+<h4>2. Guidance & Matching</h4>
+<p>We help match you with employers, universities, or travel packages based on your goals.</p>
+</div>
+<div class="timeline-step">
+<h4>3. Travel & Start</h4>
+<p>Receive visa support, book flights/accommodation, and start your journey abroad.</p>
+</div>
+</div>
+</section>
+
+<section class="section cta">
+<h2>Ready to Start Your Global Journey?</h2>
+<button onclick="window.location.href='apply.html'">Apply / Reserve Now</button>
+</section>
+
 <footer>
-<p>© 2026 Youth Global Gateway — Work. Travel. Grow.</p>
+<p>© 2026 Youth Global Gateway — Work. Travel. Study Abroad. Grow.</p>
 </footer>
 
 </body>
