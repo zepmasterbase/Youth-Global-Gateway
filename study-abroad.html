@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Abroad — Youth Global Gateway</title>
+
+<style>
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f7f9fc;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0a66c2;
+}
+
+header .apply-btn {
+    padding: 12px 24px;
+    background: #ff9800;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+header .apply-btn:hover {
+    background: #e68900;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #0a66c2, #28a745);
+    color: white;
+    text-align: center;
+    padding: 100px 20px 60px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-weight: bold;
+    border: none;
+    background: #ff9800;
+    color: white;
+    margin-top: 10px;
+}
+
+.hero button:hover {
+    background: #e68900;
+}
+
+/* Section Styles */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+/* University Cards */
+.university-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.university-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px 20px;
+    width: 320px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    text-align: left;
+}
+
+.university-card:hover {
+    transform: translateY(-5px);
+}
+
+.university-card h3 {
+    color: #0a66c2;
+    margin-bottom: 10px;
+}
+
+.university-card p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* Study Application */
+.study-application {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    margin: 40px auto;
+    max-width: 700px;
+    text-align: left;
+}
+
+.study-application h3 {
+    color: #0a66c2;
+    margin-bottom: 15px;
+}
+
+/* Form Embed */
+iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.cta button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 6px;
+    background: #ff9800;
+    color: white;
+    font-weight: bold;
+}
+
+.cta button:hover {
+    background: #e68900;
+}
+
+/* Footer */
+footer {
+    background: #0a66c2;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .university-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container" style="width:90%; margin:auto; display:flex; justify-content:space-between; align-items:center;">
+<div class="logo">Youth Global Gateway</div>
+<button class="apply-btn" onclick="window.location.href='apply.html'">Apply Now</button>
+</div>
+</header>
+
+<section class="hero">
+<h1>Study Abroad Programs</h1>
+<p>Enroll in top universities across our destination countries with guidance from our experts.</p>
+<button onclick="window.location.href='apply.html'">Start Your Application</button>
+</section>
+
+<section class="section">
+<h2>Featured Universities</h2>
+<div class="university-container">
+
+<div class="university-card">
+<h3>University of Toronto, Canada</h3>
+<p><strong>Programs:</strong> Undergrad & Postgrad</p>
+<p><strong>Tuition:</strong> $20,000–$45,000/year</p>
+<p><strong>Scholarships:</strong> Available for high-achieving students</p>
+<p><strong>Duration:</strong> 3–4 years (Undergrad), 1–2 years (Postgrad)</p>
+<button onclick="window.location.href='#application'">Apply Now</button>
+</div>
+
+<div class="university-card">
+<h3>Trinity College Dublin, Ireland</h3>
+<p><strong>Programs:</strong> Undergrad & Postgrad</p>
+<p><strong>Tuition:</strong> $18,000–$40,000/year</p>
+<p><strong>Scholarships:</strong> Merit-based scholarships available</p>
+<p><strong>Duration:</strong> 3–4 years (Undergrad), 1–2 years (Postgrad)</p>
+<button onclick="window.location.href='#application'">Apply Now</button>
+</div>
+
+<div class="university-card">
+<h3>Technical University of Munich, Germany</h3>
+<p><strong>Programs:</strong> Engineering, IT, Science</p>
+<p><strong>Tuition:</strong> Minimal / Semester fees (~$500)</p>
+<p><strong>Scholarships:</strong> Limited, competitive</p>
+<p><strong>Duration:</strong> 3–4 years (Undergrad), 1–2 years (Postgrad)</p>
+<button onclick="window.location.href='#application'">Apply Now</button>
+</div>
+
+<div class="university-card">
+<h3>University of Porto, Portugal</h3>
+<p><strong>Programs:</strong> Business, Tech, Humanities</p>
+<p><strong>Tuition:</strong> $2,500–$7,000/year</p>
+<p><strong>Scholarships:</strong> Limited, academic merit-based</p>
+<p><strong>Duration:</strong> 3–4 years (Undergrad), 1–2 years (Postgrad)</p>
+<button onclick="window.location.href='#application'">Apply Now</button>
+</div>
+
+</div>
+</section>
+
+<section class="section study-application" id="application">
+<h2>Submit Your Study Abroad Application</h2>
+<p>Fill out the application form below to start your admission process. Our team will review your details and guide you through enrollment, visa, and accommodation.</p>
+<h3>Application Form</h3>
+<!-- Google Form Embed Placeholder -->
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdEXAMPLEFORM/viewform?embedded=true" title="Study Abroad Application Form"></iframe>
+</section>
+
+<section class="section">
+<h2>Travel & Accommodation Support</h2>
+<p>We assist students with flights, airport transfers, and hotel or student housing bookings. You can also check our <a href="travel.html">Travel & Holidays</a> page for flight and hotel packages.</p>
+<button onclick="window.location.href='travel.html'">View Travel Packages</button>
+</section>
+
+<section class="cta">
+<h2>Ready to Study Abroad?</h2>
+<button onclick="window.location.href='apply.html'">Start Your Application</button>
+</section>
+
+<footer>
+<p>© 2026 Youth Global Gateway — Work. Travel. Study Abroad. Grow.</p>
+</footer>
+
+</body>
+</html>
