@@ -4,247 +4,148 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Travel & Holidays — Youth Global Gateway</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* Global Styles */
 body {
     margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background: #f7f9fc;
     color: #333;
+    overflow-x: hidden;
 }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-button {
-    cursor: pointer;
-}
-
-/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 15px 20px;
     background: white;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
+.logo { font-size: 24px; font-weight: 700; color: #0a66c2; }
+header .home-btn { padding: 10px 20px; background: #ff9800; color: white; border: none; border-radius: 6px; font-weight: 600; }
+header .home-btn:hover { background: #e68900; }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #0a66c2;
+.section { padding: 60px 15px; text-align: center; }
+.section h2 { font-size: 28px; margin-bottom: 40px; }
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
 }
 
-header .apply-btn {
-    padding: 12px 24px;
-    background: #ff9800;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-
-header .apply-btn:hover {
-    background: #e68900;
-}
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(135deg, #0a66c2, #28a745);
-    color: white;
-    text-align: center;
-    padding: 100px 20px 60px 20px;
-}
-
-.hero h1 {
-    font-size: 42px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.hero button {
-    padding: 14px 28px;
-    border-radius: 6px;
-    font-weight: bold;
-    border: none;
-    background: #ff9800;
-    color: white;
-    margin-top: 10px;
-}
-
-.hero button:hover {
-    background: #e68900;
-}
-
-/* Section Styles */
-.section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.section h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-}
-
-/* Booking Cards */
-.booking-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-.booking-card {
+.card {
     background: white;
     border-radius: 10px;
-    padding: 30px 20px;
-    width: 320px;
+    overflow: hidden;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     transition: 0.3s;
     text-align: left;
-}
-
-.booking-card:hover {
-    transform: translateY(-5px);
-}
-
-.booking-card h3 {
-    color: #0a66c2;
-    margin-bottom: 15px;
-}
-
-/* Embeds */
-iframe {
     width: 100%;
-    border: none;
-    border-radius: 8px;
-    margin-top: 15px;
-    min-height: 400px;
+    max-width: 300px;
 }
 
-/* Call to Action */
-.cta {
-    text-align: center;
-    padding: 50px 20px;
-}
+.card:hover { transform: translateY(-5px); }
 
-.cta button {
-    padding: 14px 28px;
+.card img { width: 100%; height: 180px; object-fit: cover; }
+
+.card-content { padding: 15px; }
+.card-content h3 { color: #0a66c2; margin-bottom: 8px; font-size: 20px; }
+.card-content p { font-size: 14px; margin: 4px 0; }
+.card-content .price { font-size: 18px; color: #ff9800; margin: 8px 0; font-weight: 600; }
+.card-content .rating { color: #ffb400; font-weight: 600; }
+
+.card-content button {
+    margin-top: 10px;
+    padding: 10px 18px;
     border: none;
     border-radius: 6px;
-    background: #ff9800;
-    color: white;
-    font-weight: bold;
-}
-
-.cta button:hover {
-    background: #e68900;
-}
-
-/* Footer */
-footer {
     background: #0a66c2;
     color: white;
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 40px;
+    font-weight: 600;
+    width: 100%;
 }
+.card-content button:hover { background: #084a99; }
+
+/* Flight Cards */
+.flight-card { border-left: 4px solid #ff9800; }
 
 /* Responsive */
-@media (max-width: 900px) {
-    .booking-container {
-        flex-direction: column;
-        align-items: center;
-    }
+@media (max-width: 600px) {
+    .section h2 { font-size: 24px; }
 }
 </style>
 </head>
-
 <body>
 
 <header>
-<div class="container" style="width:90%; margin:auto; display:flex; justify-content:space-between; align-items:center;">
-<div class="logo">Youth Global Gateway</div>
-<button class="apply-btn" onclick="window.location.href='apply.html'">Apply Now</button>
-</div>
+    <div class="logo">Youth Global Gateway</div>
+    <button class="home-btn" onclick="window.location.href='index.html'">Home</button>
 </header>
 
-<section class="hero">
-<h1>Travel & Holidays Made Easy</h1>
-<p>Book flights and hotels worldwide, or combine travel with your work or study abroad program.</p>
-<button onclick="window.location.href='apply.html'">Start Your Journey</button>
-</section>
-
 <section class="section">
-<h2>Flight Booking</h2>
-<p>Search and book flights to your destination.</p>
-
-<div class="booking-container">
-<div class="booking-card">
-<h3>Flight Search</h3>
-<!-- Skyscanner iframe placeholder -->
-<iframe src="https://www.skyscanner.com/transport/flights" title="Flight Booking Widget"></iframe>
-</div>
-</div>
-</section>
-
-<section class="section" style="background:#f0f0f0;">
-<h2>Hotel Booking</h2>
-<p>Find the best hotels for your stay abroad.</p>
-
-<div class="booking-container">
-<div class="booking-card">
-<h3>Hotel Reservations</h3>
-<!-- Booking.com iframe placeholder -->
-<iframe src="https://www.booking.com/index.html" title="Hotel Booking Widget"></iframe>
-</div>
+<h2>Premium Flight Packages</h2>
+<div class="cards">
+    <div class="card flight-card">
+        <div class="card-content">
+            <h3>Flight to Canada</h3>
+            <p>From Johannesburg (JNB) to Toronto (YYZ)</p>
+            <p class="price">$850 – $1,200</p>
+            <p class="rating">⭐⭐⭐⭐</p>
+            <button onclick="window.open('https://forms.gle/your-google-form-link','_blank')">Book Flight</button>
+        </div>
+    </div>
+    <div class="card flight-card">
+        <div class="card-content">
+            <h3>Flight to Portugal</h3>
+            <p>From Cape Town (CPT) to Lisbon (LIS)</p>
+            <p class="price">$600 – $950</p>
+            <p class="rating">⭐⭐⭐⭐</p>
+            <button onclick="window.open('https://forms.gle/your-google-form-link','_blank')">Book Flight</button>
+        </div>
+    </div>
 </div>
 </section>
 
 <section class="section">
-<h2>Travel Packages</h2>
-<p>Combine work, study, or holiday with complete flight + hotel packages.</p>
-
-<div class="booking-container">
-<div class="booking-card">
-<h3>Work & Travel</h3>
-<p>Flight + hotel package for work abroad programs.</p>
-<button onclick="window.location.href='apply.html'">Book Now</button>
-</div>
-<div class="booking-card">
-<h3>Holiday Packages</h3>
-<p>Flight + hotel package for leisure trips abroad.</p>
-<button onclick="window.location.href='apply.html'">Book Now</button>
-</div>
-<div class="booking-card">
-<h3>Study Abroad Packages</h3>
-<p>Flight + accommodation + university support services.</p>
-<button onclick="window.location.href='study-abroad.html'">Learn More</button>
-</div>
+<h2>Hotel & Apartment Browsing (Coming Soon)</h2>
+<div class="cards">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1560347876-aeef00ee58a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDh8fGhvdGVsfGVufDB8fHx8MTY5OTk5OTc1Mg&ixlib=rb-4.0.3&q=80&w=400" alt="Hotel Lisbon">
+        <div class="card-content">
+            <h3>Lisbon Downtown Hotel</h3>
+            <p>2 Guests · Free Wi-Fi · Breakfast Included</p>
+            <p class="price">$120/night</p>
+            <p class="rating">⭐⭐⭐⭐</p>
+            <button disabled>Coming Soon</button>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDZ8fGhvdGVsfGVufDB8fHx8MTY5OTk5OTc2MA&ixlib=rb-4.0.3&q=80&w=400" alt="Toronto Apartment">
+        <div class="card-content">
+            <h3>Toronto Apartment Suite</h3>
+            <p>3 Guests · City View · Kitchen Included</p>
+            <p class="price">$150/night</p>
+            <p class="rating">⭐⭐⭐⭐⭐</p>
+            <button disabled>Coming Soon</button>
+        </div>
+    </div>
 </div>
 </section>
 
-<section class="cta">
-<h2>Ready to Book Your Next Adventure?</h2>
-<button onclick="window.location.href='apply.html'">Apply / Reserve Now</button>
+<section class="section">
+<h2>Want to be Notified When Booking Opens?</h2>
+<p>Submit your interest now and we’ll notify you once flight & hotel booking is live.</p>
+<button onclick="window.open('https://forms.gle/your-google-form-link','_blank')">Submit Interest</button>
 </section>
-
-<footer>
-<p>© 2026 Youth Global Gateway — Work. Travel. Study Abroad. Grow.</p>
-</footer>
 
 </body>
 </html>
